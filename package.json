@@ -1,0 +1,19 @@
+{
+  "name": "my-fs",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Mintea file service for image upload, storage, and delivery",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-secrets-manager": "^3.914.0",
+    "pg": "^8.16.3"
+  }
+}

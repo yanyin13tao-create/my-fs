@@ -1,0 +1,22 @@
+name: mintea-fs
+
+services:
+  file-service:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    restart: always
+    environment:
+      NODE_ENV: production
+      PORT: "4000"
+      PUBLIC_BASE_URL: http://localhost:4000
+      ALLOWED_ORIGINS: "*"
+      FILES_ROOT: /app/storage
+      MAX_FILE_BYTES: "5242880"
+    ports:
+      - "4000:4000"
+    volumes:
+      - file-storage:/app/storage
+
+volumes:
+  file-storage:
